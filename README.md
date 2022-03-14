@@ -1,2 +1,2 @@
 # ccdc_recon
-Home of tools used to view running services and platforms within the CCDC competition
+Quick Scripts for nmap'ing team networks for CCDC regionals
