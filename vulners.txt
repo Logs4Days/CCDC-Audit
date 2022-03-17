@@ -1,0 +1,562 @@
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-17 01:31 EDT
+Nmap scan report for 10.11.17.5
+Host is up (0.020s latency).
+Not shown: 988 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain        Simple DNS Plus
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2022-03-17 05:33:38Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: cmeyer-lab.io, Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds  Microsoft Windows Server 2008 R2 - 2012 microsoft-ds (workgroup: CMEYER-LAB)
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: cmeyer-lab.io, Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+Service Info: Host: CHAD-DC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.10.17.5
+Host is up (0.020s latency).
+Not shown: 988 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain        Simple DNS Plus
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2022-03-17 05:33:39Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: cmeyer-lab.com0., Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: cmeyer-lab.com0., Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+Service Info: Host: MGMT-CMEYER-DC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.10.17.9
+Host is up (0.020s latency).
+Not shown: 988 filtered tcp ports (no-response)
+PORT     STATE  SERVICE         VERSION
+22/tcp   closed ssh
+80/tcp   open   http            envoy
+| fingerprint-strings: 
+|   DNSStatusRequestTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Thu, 17 Mar 2022 05:32:04 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Thu, 17 Mar 2022 05:32:03 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   FourOhFourRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     location: https://localhost:443/nice%20ports%2C/Trinity.txt.bak
+|     date: Thu, 17 Mar 2022 05:31:56 GMT
+|     server: envoy
+|     connection: close
+|     content-length: 0
+|   GetRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     location: https://localhost:443/
+|     date: Thu, 17 Mar 2022 05:31:52 GMT
+|     server: envoy
+|     connection: close
+|     content-length: 0
+|   HTTPOptions: 
+|     HTTP/1.0 301 Moved Permanently
+|     location: https://localhost:443/
+|     date: Thu, 17 Mar 2022 05:31:53 GMT
+|     server: envoy
+|     connection: close
+|     content-length: 0
+|   Help: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Thu, 17 Mar 2022 05:32:05 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Thu, 17 Mar 2022 05:32:02 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Thu, 17 Mar 2022 05:31:54 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Thu, 17 Mar 2022 05:31:55 GMT
+|     server: envoy
+|     connection: close
+|_    Request
+|_http-server-header: envoy
+88/tcp   open   kerberos-sec?
+389/tcp  open   ldap
+| fingerprint-strings: 
+|   LDAPBindReq: 
+|     %Currently, only LDAP V3 is supported.
+|   LDAPSearchReq: 
+|     cn=DSE Root0
+|     $vmwPlatformServicesControllerVersion1
+|     7.0.20<
+|     rootDomainNamingContext1!
+|     dc=vSphere,dc=cmeyer-lab,dc=com09
+|     defaultNamingContext1!
+|     dc=vSphere,dc=cmeyer-lab,dc=com0P
+|     configurationNamingContext12
+|     0cn=Configuration,dc=vSphere,dc=cmeyer-lab,dc=com0)
+|     schemaNamingContext1
+|     cn=schemacontext04
+|     subSchemaSubEntry1
+|     cn=aggregate,cn=schemacontext03
+|     namingContexts1!
+|     dc=vSphere,dc=cmeyer-lab,dc=com0~
+|     serverName1p
+|     ncn=vsphere.cmeyer-lab.com,cn=Servers,cn=default-site,cn=Sites,cn=Configuration,dc=vSphere,dc=cmeyer-lab,dc=com0Q
+|     vmwAdministratorDN1;
+|     9cn=Administrator,cn=Users,dc=vSphere,dc=cmeyer-lab,dc=com0c
+|     vmwDCAccountDN1Q
+|     Ocn=vsphere.cmeyer-lab.com,ou=Domain Controllers,dc=vSphere,dc=cmeyer-lab,dc=com0B
+|     vmwDCAccountUPN1/
+|     -vsphere.cmeyer-lab.com@VSPHERE.CMEYER-LAB.COM0O
+|     deletedObjectsContainer14
+|     2cn=Deleted Objects,dc=vSphere,dc=cmeyer-lab,dc=com0
+|_    msDS-
+443/tcp  open   ssl/https       VMware vCenter Server SOAP API 7.0.2
+|_http-server-header: envoy
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     date: Thu, 17 Mar 2022 05:32:06 GMT
+|     content-security-policy: block-all-mixed-content
+|     content-type: text/plain; charset=utf-8
+|     strict-transport-security: max-age=31536000
+|     x-content-type-options: nosniff
+|     x-frame-options: DENY
+|     x-xss-protection: 1
+|     content-length: 0
+|     x-envoy-upstream-service-time: 1
+|     server: envoy
+|     connection: close
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     date: Thu, 17 Mar 2022 05:32:04 GMT
+|     content-security-policy: block-all-mixed-content
+|     content-type: text/html
+|     strict-transport-security: max-age=31536000
+|     x-content-type-options: nosniff
+|     x-frame-options: DENY
+|     x-xss-protection: 1
+|     content-length: 3618
+|     x-envoy-upstream-service-time: 1
+|     server: envoy
+|     connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+|     <head>
+|     <meta http-equiv="content-type" content="text/html; charset=utf-8">
+|     <script type="text/javascript" src="./en/welcomeRes.js"> </script>
+|     <script type="text/javascript" src="./scripts/setUserLocale.js"> </script>
+|     <script type="text/javascript">document.write("<title>" + ID_VC_Welcome + "</title>");</script>
+|     <link rel="stylesheet" href="./default.css" type="text/
+|   HTTPOptions: 
+|     HTTP/1.0 501 Not Implemented
+|     date: Thu, 17 Mar 2022 05:32:05 GMT
+|     content-security-policy: block-all-mixed-content
+|     content-type: text/plain; charset=utf-8
+|     strict-transport-security: max-age=31536000
+|     x-content-type-options: nosniff
+|     x-frame-options: DENY
+|     x-xss-protection: 1
+|     content-length: 0
+|     x-envoy-upstream-service-time: 1
+|     server: envoy
+|_    connection: close
+| vmware-version: 
+|   Server version: VMware vCenter Server 7.0.2
+|   Build: 17958471
+|   Locale version: INTL 000
+|   OS type: linux-x64
+|_  Product Line ID: vpx
+514/tcp  open   shell?
+636/tcp  open   ssl/ldap
+| fingerprint-strings: 
+|   LDAPBindReq: 
+|     %Currently, only LDAP V3 is supported.
+|   LDAPSearchReq: 
+|     cn=DSE Root0
+|     $vmwPlatformServicesControllerVersion1
+|     7.0.20<
+|     rootDomainNamingContext1!
+|     dc=vSphere,dc=cmeyer-lab,dc=com09
+|     defaultNamingContext1!
+|     dc=vSphere,dc=cmeyer-lab,dc=com0P
+|     configurationNamingContext12
+|     0cn=Configuration,dc=vSphere,dc=cmeyer-lab,dc=com0)
+|     schemaNamingContext1
+|     cn=schemacontext04
+|     subSchemaSubEntry1
+|     cn=aggregate,cn=schemacontext03
+|     namingContexts1!
+|     dc=vSphere,dc=cmeyer-lab,dc=com0~
+|     serverName1p
+|     ncn=vsphere.cmeyer-lab.com,cn=Servers,cn=default-site,cn=Sites,cn=Configuration,dc=vSphere,dc=cmeyer-lab,dc=com0Q
+|     vmwAdministratorDN1;
+|     9cn=Administrator,cn=Users,dc=vSphere,dc=cmeyer-lab,dc=com0c
+|     vmwDCAccountDN1Q
+|     Ocn=vsphere.cmeyer-lab.com,ou=Domain Controllers,dc=vSphere,dc=cmeyer-lab,dc=com0B
+|     vmwDCAccountUPN1/
+|     -vsphere.cmeyer-lab.com@VSPHERE.CMEYER-LAB.COM0O
+|     deletedObjectsContainer14
+|     2cn=Deleted Objects,dc=vSphere,dc=cmeyer-lab,dc=com0
+|_    msDS-
+902/tcp  closed iss-realsecure
+2020/tcp open   xinupageserver?
+6502/tcp closed netop-rc
+8010/tcp closed xmpp
+8084/tcp open   ssl/websnp?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Thu, 17 Mar 2022 05:32:27 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Thu, 17 Mar 2022 05:32:26 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.0 501 Not Implemented
+|     date: Thu, 17 Mar 2022 05:32:22 GMT
+|     content-type: text/plain; charset=utf-8
+|     content-length: 0
+|     x-envoy-upstream-service-time: 1
+|     server: envoy
+|     connection: close
+|   HTTPOptions: 
+|     HTTP/1.0 501 Not Implemented
+|     date: Thu, 17 Mar 2022 05:32:23 GMT
+|     content-type: text/plain; charset=utf-8
+|     content-length: 0
+|     x-envoy-upstream-service-time: 1
+|     server: envoy
+|     connection: close
+|   Help: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Thu, 17 Mar 2022 05:32:29 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Thu, 17 Mar 2022 05:32:25 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Thu, 17 Mar 2022 05:32:24 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   SSLSessionReq: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Thu, 17 Mar 2022 05:32:30 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Thu, 17 Mar 2022 05:32:31 GMT
+|     server: envoy
+|     connection: close
+|_    Request
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=3/17%Time=6232C7C9%P=x86_64-apple-darwin21.1.0%
+SF:r(GetRequest,9E,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nlocation:\
+SF:x20https://localhost:443/\r\ndate:\x20Thu,\x2017\x20Mar\x202022\x2005:3
+SF:1:52\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20close\r\ncontent-leng
+SF:th:\x200\r\n\r\n")%r(HTTPOptions,9E,"HTTP/1\.0\x20301\x20Moved\x20Perma
+SF:nently\r\nlocation:\x20https://localhost:443/\r\ndate:\x20Thu,\x2017\x2
+SF:0Mar\x202022\x2005:31:53\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20c
+SF:lose\r\ncontent-length:\x200\r\n\r\n")%r(RTSPRequest,9C,"HTTP/1\.1\x204
+SF:00\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\x20text/
+SF:plain\r\ndate:\x20Thu,\x2017\x20Mar\x202022\x2005:31:54\x20GMT\r\nserve
+SF:r:\x20envoy\r\nconnection:\x20close\r\n\r\nBad\x20Request")%r(X11Probe,
+SF:9C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncont
+SF:ent-type:\x20text/plain\r\ndate:\x20Thu,\x2017\x20Mar\x202022\x2005:31:
+SF:55\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20close\r\n\r\nBad\x20Req
+SF:uest")%r(FourOhFourRequest,BD,"HTTP/1\.0\x20301\x20Moved\x20Permanently
+SF:\r\nlocation:\x20https://localhost:443/nice%20ports%2C/Trinity\.txt\.ba
+SF:k\r\ndate:\x20Thu,\x2017\x20Mar\x202022\x2005:31:56\x20GMT\r\nserver:\x
+SF:20envoy\r\nconnection:\x20close\r\ncontent-length:\x200\r\n\r\n")%r(RPC
+SF:Check,9C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r
+SF:\ncontent-type:\x20text/plain\r\ndate:\x20Thu,\x2017\x20Mar\x202022\x20
+SF:05:32:02\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20close\r\n\r\nBad\
+SF:x20Request")%r(DNSVersionBindReqTCP,9C,"HTTP/1\.1\x20400\x20Bad\x20Requ
+SF:est\r\ncontent-length:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x2
+SF:0Thu,\x2017\x20Mar\x202022\x2005:32:03\x20GMT\r\nserver:\x20envoy\r\nco
+SF:nnection:\x20close\r\n\r\nBad\x20Request")%r(DNSStatusRequestTCP,9C,"HT
+SF:TP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-ty
+SF:pe:\x20text/plain\r\ndate:\x20Thu,\x2017\x20Mar\x202022\x2005:32:04\x20
+SF:GMT\r\nserver:\x20envoy\r\nconnection:\x20close\r\n\r\nBad\x20Request")
+SF:%r(Help,9C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011
+SF:\r\ncontent-type:\x20text/plain\r\ndate:\x20Thu,\x2017\x20Mar\x202022\x
+SF:2005:32:05\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20close\r\n\r\nBa
+SF:d\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port389-TCP:V=7.92%I=7%D=3/17%Time=6232C7D3%P=x86_64-apple-darwin21.1.0
+SF:%r(LDAPSearchReq,774,"0\x82\x07b\x02\x01\x07d\x82\x07\[\x04\x0bcn=DSE\x
+SF:20Root0\x82\x07J0/\x04\$vmwPlatformServicesControllerVersion1\x07\x04\x
+SF:057\.0\.20<\x04\x17rootDomainNamingContext1!\x04\x1fdc=vSphere,dc=cmeye
+SF:r-lab,dc=com09\x04\x14defaultNamingContext1!\x04\x1fdc=vSphere,dc=cmeye
+SF:r-lab,dc=com0P\x04\x1aconfigurationNamingContext12\x040cn=Configuration
+SF:,dc=vSphere,dc=cmeyer-lab,dc=com0\)\x04\x13schemaNamingContext1\x12\x04
+SF:\x10cn=schemacontext04\x04\x11subSchemaSubEntry1\x1f\x04\x1dcn=aggregat
+SF:e,cn=schemacontext03\x04\x0enamingContexts1!\x04\x1fdc=vSphere,dc=cmeye
+SF:r-lab,dc=com0~\x04\nserverName1p\x04ncn=vsphere\.cmeyer-lab\.com,cn=Ser
+SF:vers,cn=default-site,cn=Sites,cn=Configuration,dc=vSphere,dc=cmeyer-lab
+SF:,dc=com0Q\x04\x12vmwAdministratorDN1;\x049cn=Administrator,cn=Users,dc=
+SF:vSphere,dc=cmeyer-lab,dc=com0c\x04\x0evmwDCAccountDN1Q\x04Ocn=vsphere\.
+SF:cmeyer-lab\.com,ou=Domain\x20Controllers,dc=vSphere,dc=cmeyer-lab,dc=co
+SF:m0B\x04\x0fvmwDCAccountUPN1/\x04-vsphere\.cmeyer-lab\.com@VSPHERE\.CMEY
+SF:ER-LAB\.COM0O\x04\x17deletedObjectsContainer14\x042cn=Deleted\x20Object
+SF:s,dc=vSphere,dc=cmeyer-lab,dc=com0\x1f\x04\rmsDS-")%r(LDAPBindReq,33,"0
+SF:1\x02\x01\x01a,\n\x01\x02\x04\0\x04%Currently,\x20only\x20LDAP\x20V3\x2
+SF:0is\x20supported\.");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port636-TCP:V=7.92%T=SSL%I=7%D=3/17%Time=6232C7D9%P=x86_64-apple-darwin
+SF:21.1.0%r(LDAPSearchReq,774,"0\x82\x07b\x02\x01\x07d\x82\x07\[\x04\x0bcn
+SF:=DSE\x20Root0\x82\x07J0/\x04\$vmwPlatformServicesControllerVersion1\x07
+SF:\x04\x057\.0\.20<\x04\x17rootDomainNamingContext1!\x04\x1fdc=vSphere,dc
+SF:=cmeyer-lab,dc=com09\x04\x14defaultNamingContext1!\x04\x1fdc=vSphere,dc
+SF:=cmeyer-lab,dc=com0P\x04\x1aconfigurationNamingContext12\x040cn=Configu
+SF:ration,dc=vSphere,dc=cmeyer-lab,dc=com0\)\x04\x13schemaNamingContext1\x
+SF:12\x04\x10cn=schemacontext04\x04\x11subSchemaSubEntry1\x1f\x04\x1dcn=ag
+SF:gregate,cn=schemacontext03\x04\x0enamingContexts1!\x04\x1fdc=vSphere,dc
+SF:=cmeyer-lab,dc=com0~\x04\nserverName1p\x04ncn=vsphere\.cmeyer-lab\.com,
+SF:cn=Servers,cn=default-site,cn=Sites,cn=Configuration,dc=vSphere,dc=cmey
+SF:er-lab,dc=com0Q\x04\x12vmwAdministratorDN1;\x049cn=Administrator,cn=Use
+SF:rs,dc=vSphere,dc=cmeyer-lab,dc=com0c\x04\x0evmwDCAccountDN1Q\x04Ocn=vsp
+SF:here\.cmeyer-lab\.com,ou=Domain\x20Controllers,dc=vSphere,dc=cmeyer-lab
+SF:,dc=com0B\x04\x0fvmwDCAccountUPN1/\x04-vsphere\.cmeyer-lab\.com@VSPHERE
+SF:\.CMEYER-LAB\.COM0O\x04\x17deletedObjectsContainer14\x042cn=Deleted\x20
+SF:Objects,dc=vSphere,dc=cmeyer-lab,dc=com0\x1f\x04\rmsDS-")%r(LDAPBindReq
+SF:,33,"01\x02\x01\x01a,\n\x01\x02\x04\0\x04%Currently,\x20only\x20LDAP\x2
+SF:0V3\x20is\x20supported\.");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8084-TCP:V=7.92%T=SSL%I=7%D=3/17%Time=6232C7E7%P=x86_64-apple-darwi
+SF:n21.1.0%r(GetRequest,C5,"HTTP/1\.0\x20501\x20Not\x20Implemented\r\ndate
+SF::\x20Thu,\x2017\x20Mar\x202022\x2005:32:22\x20GMT\r\ncontent-type:\x20t
+SF:ext/plain;\x20charset=utf-8\r\ncontent-length:\x200\r\nx-envoy-upstream
+SF:-service-time:\x201\r\nserver:\x20envoy\r\nconnection:\x20close\r\n\r\n
+SF:")%r(HTTPOptions,C5,"HTTP/1\.0\x20501\x20Not\x20Implemented\r\ndate:\x2
+SF:0Thu,\x2017\x20Mar\x202022\x2005:32:23\x20GMT\r\ncontent-type:\x20text/
+SF:plain;\x20charset=utf-8\r\ncontent-length:\x200\r\nx-envoy-upstream-ser
+SF:vice-time:\x201\r\nserver:\x20envoy\r\nconnection:\x20close\r\n\r\n")%r
+SF:(RTSPRequest,9C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\
+SF:x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20Thu,\x2017\x20Mar\x202
+SF:022\x2005:32:24\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20close\r\n\
+SF:r\nBad\x20Request")%r(RPCCheck,9C,"HTTP/1\.1\x20400\x20Bad\x20Request\r
+SF:\ncontent-length:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20Thu,
+SF:\x2017\x20Mar\x202022\x2005:32:25\x20GMT\r\nserver:\x20envoy\r\nconnect
+SF:ion:\x20close\r\n\r\nBad\x20Request")%r(DNSVersionBindReqTCP,9C,"HTTP/1
+SF:\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\
+SF:x20text/plain\r\ndate:\x20Thu,\x2017\x20Mar\x202022\x2005:32:26\x20GMT\
+SF:r\nserver:\x20envoy\r\nconnection:\x20close\r\n\r\nBad\x20Request")%r(D
+SF:NSStatusRequestTCP,9C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-le
+SF:ngth:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20Thu,\x2017\x20Ma
+SF:r\x202022\x2005:32:27\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20clos
+SF:e\r\n\r\nBad\x20Request")%r(Help,9C,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\ncontent-length:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20Th
+SF:u,\x2017\x20Mar\x202022\x2005:32:29\x20GMT\r\nserver:\x20envoy\r\nconne
+SF:ction:\x20close\r\n\r\nBad\x20Request")%r(SSLSessionReq,9C,"HTTP/1\.1\x
+SF:20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\x20te
+SF:xt/plain\r\ndate:\x20Thu,\x2017\x20Mar\x202022\x2005:32:30\x20GMT\r\nse
+SF:rver:\x20envoy\r\nconnection:\x20close\r\n\r\nBad\x20Request")%r(Termin
+SF:alServerCookie,9C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length
+SF::\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20Thu,\x2017\x20Mar\x2
+SF:02022\x2005:32:31\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20close\r\
+SF:n\r\nBad\x20Request");
+Service Info: CPE: cpe:/o:vmware:vCenter Server:7.0.2
+
+Nmap scan report for 10.10.17.254
+Host is up (0.019s latency).
+Not shown: 991 filtered tcp ports (no-response)
+PORT     STATE  SERVICE         VERSION
+22/tcp   closed ssh
+80/tcp   open   http            VMware ESXi Server httpd
+443/tcp  open   ssl/https       VMware ESXi SOAP API 7.0.3
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Thu, 17 Mar 2022 05:33:51 GMT
+|     Connection: close
+|     Content-Security-Policy: upgrade-insecure-requests
+|     Content-Type: text/plain; charset=utf-8
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: DENY
+|     X-XSS-Protection: 1
+|     Content-Length: 0
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 17 Mar 2022 05:33:51 GMT
+|     Connection: close
+|     Content-Security-Policy: upgrade-insecure-requests
+|     Content-Type: text/html
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: DENY
+|     X-XSS-Protection: 1
+|     Content-Length: 258
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+|     <html lang="en">
+|     <head>
+|     <meta http-equiv="content-type" content="text/html; charset=utf8">
+|     <meta http-equiv="refresh" content="0;URL='/ui'"/>
+|     </head>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 501 Not Implemented
+|     Date: Thu, 17 Mar 2022 05:33:51 GMT
+|     Connection: close
+|     Content-Security-Policy: upgrade-insecure-requests
+|     Content-Type: text/plain; charset=utf-8
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: DENY
+|     X-XSS-Protection: 1
+|     Content-Length: 0
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Thu, 17 Mar 2022 05:34:01 GMT
+|     Connection: close
+|     Content-Type: text/html
+|     Content-Length: 50
+|     <HTML><BODY><H1>400 Bad Request</H1></BODY></HTML>
+|   SIPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Thu, 17 Mar 2022 05:35:10 GMT
+|     Connection: close
+|     Content-Type: text/html
+|     Content-Length: 50
+|_    <HTML><BODY><H1>400 Bad Request</H1></BODY></HTML>
+| vmware-version: 
+|   Server version: VMware ESXi 7.0.3
+|   Build: 19193900
+|   Locale version: INTL 000
+|   OS type: vmnix-x86
+|_  Product Line ID: embeddedEsx
+902/tcp  open   ssl/vmware-auth VMware Authentication Daemon 1.10 (Uses VNC, SOAP)
+5988/tcp closed wbem-http
+5989/tcp closed wbem-https
+8000/tcp open   http-alt?
+8300/tcp open   tmi?
+9080/tcp open   ssl/glrpc?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: 
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Type: text/xml
+|     Content-Length: 0
+|     Connection: close
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Server: 
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Type: text/xml; charset=utf-8
+|     Content-Length: 0
+|     Connection: close
+|   RPCCheck, TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     Server: 
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Type: application/soap+xml; charset=utf-8
+|     Content-Length: 1615
+|     Connection: close
+|     <?xml version="1.0" encoding="UTF-8"?>
+|_    <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope" xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://vasa.vim.vmware.com/xsd" xmlns:placementPolicy="http://placement.policy.data.vasa.vim.vmware.com/xsd" xmlns:fault="http://fault.vasa.vim.vmware.com/xsd" xmlns:capability="http://capability.policy.data.vasa.vim.vmware.com/xsd" xmlns:profile="http://profile.policy.data.vasa.vim.vmware.com/xsd" xmlns:ns3="http://annotation.vasa.vim.vmware.com/xsd" xmlns:policy="http://policy.data.vasa.vim.vmware.com/xsd" xmlns:providerCapability="http://provider.capab
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9080-TCP:V=7.92%T=SSL%I=7%D=3/17%Time=6232C7E6%P=x86_64-apple-darwi
+SF:n21.1.0%r(GetRequest,78,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20\r\nX-Fra
+SF:me-Options:\x20SAMEORIGIN\r\nContent-Type:\x20text/xml\r\nContent-Lengt
+SF:h:\x200\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,87,"HTTP/1\.1\x
+SF:20200\x20OK\r\nServer:\x20\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent
+SF:-Type:\x20text/xml;\x20charset=utf-8\r\nContent-Length:\x200\r\nConnect
+SF:ion:\x20close\r\n\r\n")%r(RPCCheck,6EE,"HTTP/1\.1\x20400\x20Bad\x20Requ
+SF:est\r\nServer:\x20\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Type:\x
+SF:20application/soap\+xml;\x20charset=utf-8\r\nContent-Length:\x201615\r\
+SF:nConnection:\x20close\r\n\r\n<\?xml\x20version=\"1\.0\"\x20encoding=\"U
+SF:TF-8\"\?>\n<SOAP-ENV:Envelope\x20xmlns:SOAP-ENV=\"http://www\.w3\.org/2
+SF:003/05/soap-envelope\"\x20xmlns:SOAP-ENC=\"http://www\.w3\.org/2003/05/
+SF:soap-encoding\"\x20xmlns:xsi=\"http://www\.w3\.org/2001/XMLSchema-insta
+SF:nce\"\x20xmlns:xsd=\"http://www\.w3\.org/2001/XMLSchema\"\x20xmlns:ns1=
+SF:\"http://vasa\.vim\.vmware\.com/xsd\"\x20xmlns:placementPolicy=\"http:/
+SF:/placement\.policy\.data\.vasa\.vim\.vmware\.com/xsd\"\x20xmlns:fault=\
+SF:"http://fault\.vasa\.vim\.vmware\.com/xsd\"\x20xmlns:capability=\"http:
+SF://capability\.policy\.data\.vasa\.vim\.vmware\.com/xsd\"\x20xmlns:profi
+SF:le=\"http://profile\.policy\.data\.vasa\.vim\.vmware\.com/xsd\"\x20xmln
+SF:s:ns3=\"http://annotation\.vasa\.vim\.vmware\.com/xsd\"\x20xmlns:policy
+SF:=\"http://policy\.data\.vasa\.vim\.vmware\.com/xsd\"\x20xmlns:providerC
+SF:apability=\"http://provider\.capab")%r(TerminalServerCookie,6EE,"HTTP/1
+SF:\.1\x20400\x20Bad\x20Request\r\nServer:\x20\r\nX-Frame-Options:\x20SAME
+SF:ORIGIN\r\nContent-Type:\x20application/soap\+xml;\x20charset=utf-8\r\nC
+SF:ontent-Length:\x201615\r\nConnection:\x20close\r\n\r\n<\?xml\x20version
+SF:=\"1\.0\"\x20encoding=\"UTF-8\"\?>\n<SOAP-ENV:Envelope\x20xmlns:SOAP-EN
+SF:V=\"http://www\.w3\.org/2003/05/soap-envelope\"\x20xmlns:SOAP-ENC=\"htt
+SF:p://www\.w3\.org/2003/05/soap-encoding\"\x20xmlns:xsi=\"http://www\.w3\
+SF:.org/2001/XMLSchema-instance\"\x20xmlns:xsd=\"http://www\.w3\.org/2001/
+SF:XMLSchema\"\x20xmlns:ns1=\"http://vasa\.vim\.vmware\.com/xsd\"\x20xmlns
+SF::placementPolicy=\"http://placement\.policy\.data\.vasa\.vim\.vmware\.c
+SF:om/xsd\"\x20xmlns:fault=\"http://fault\.vasa\.vim\.vmware\.com/xsd\"\x2
+SF:0xmlns:capability=\"http://capability\.policy\.data\.vasa\.vim\.vmware\
+SF:.com/xsd\"\x20xmlns:profile=\"http://profile\.policy\.data\.vasa\.vim\.
+SF:vmware\.com/xsd\"\x20xmlns:ns3=\"http://annotation\.vasa\.vim\.vmware\.
+SF:com/xsd\"\x20xmlns:policy=\"http://policy\.data\.vasa\.vim\.vmware\.com
+SF:/xsd\"\x20xmlns:providerCapability=\"http://provider\.capab");
+Service Info: Host: localhost.localdomain; CPE: cpe:/o:vmware:esxi, cpe:/o:vmware:ESXi:7.0.3
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 4 IP addresses (4 hosts up) scanned in 188.37 seconds
