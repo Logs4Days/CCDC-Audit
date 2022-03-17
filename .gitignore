@@ -1,0 +1,4 @@
+*.git
+*DS*
+aliveHosts
+vulnReport
