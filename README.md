@@ -8,3 +8,9 @@ Check out more info here:
 https://www.nationalccdc.org/ 
 
 ## Files
+- `livehosts` is used to map each team's subnet and create lists of hosts that respond to nmap scans. This way we can perform more intense scans later on only alive hosts
+- `vulnscan` runs vulners script against the live hosts files. This will lookup all CVEs associated with a given exposed service
+
+## To do 
+[ ] Get user input to generate subnet lists so I don't have to iterate through numbers in a for loop
+[ ] Add IP spoofing so I can pretend to be the scoring engine(s) 
