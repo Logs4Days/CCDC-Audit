@@ -7,6 +7,10 @@ CCDC is a cyber security competition put on by a group of voulenteers aimed at g
 Check out more info here:
 https://www.nationalccdc.org/ 
 
+Students are given virtual networks and a written scenairo. They are tasked with defending the network from a professional red team and keeping services up while beeing flooded with business tasks called 'injects'. 
+
+Injects can be anything from "Set a password policy" to "Deploy a working SIEM platform"
+
 ## Files
 - `livehosts` is used to map each team's subnet and create lists of hosts that respond to nmap scans. This way we can perform more intense scans later on only alive hosts
 - `vulnscan` runs vulners script against the live hosts files. This will lookup all CVEs associated with a given exposed service
