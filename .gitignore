@@ -1,6 +1,4 @@
 *.git
 *DS*
-aliveHosts
-vulnReport
-*vulners*
-openPorts
+AliveHosts
+team*
