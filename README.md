@@ -12,8 +12,8 @@ Students are given virtual networks and a written scenairo. They are tasked with
 Injects can be anything from "Set a password policy" to "Deploy a working SIEM platform"
 
 ## Files
-- `livehosts.sh` is used to map each team's subnet and create lists of hosts that respond to nmap scans. This way we can perform more intense scans later on only alive hosts
-- `vulnscan.sh` runs vulners script against the live hosts files. This will lookup all CVEs associated with a given exposed service
+- `01_livehosts.sh` is used to map each team's subnet and create lists of hosts that respond to nmap scans. This way we can perform more intense scans later on only alive hosts
+- `02_vulnscan.sh` runs vulners script against the live hosts files. This will lookup all CVEs associated with a given exposed service
 
 ## To do 
 - [ ] Get user input to generate subnet lists so I don't have to iterate through numbers in a for loop
